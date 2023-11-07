@@ -65,7 +65,7 @@ const Home = () => {
     <section className="max-w-7xl mx-auto">
       <div>
         <h1 className="font-extrabold text-white text-[32px]">Imagenes de la comunidad</h1>
-        <p className="mt-2 text-gray-200 text-[14px] max-w-[500px]">Explora entre las imagenes generadas por la comunidad con Wall-E</p>
+        <p className="mt-2 text-gray-200 text-[14px] max-w-[500px]">Explora entre las imágenes generadas por la comunidad con Wall-E. Para crear tu propio post y compartirlo, presiona el botón "Crear" ubicado en la esquina superior derecha.</p>
       </div>
 
       <div className="mt-16">
