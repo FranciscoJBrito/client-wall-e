@@ -17,7 +17,7 @@ const CreatePost = () => {
   const [generatingImg, setGeneratingImg] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
+  const handleChange = (e) =>  setForm({ ...form, [e.target.name]: e.target.value });
 
   const handleSurpriseMe = () => {
     const randomPrompt = getRandomPrompt(form.prompt);
@@ -57,7 +57,6 @@ const CreatePost = () => {
     if (form.prompt && form.photo) {
       setLoading(true);
 
-      //https://backend-walle.onrender.com
       try {
         const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/v1/post`, {
           method: 'POST',
@@ -90,6 +89,7 @@ const CreatePost = () => {
       <form className="mt-16 max-w-3xl" onSubmit={handleSubmit}>
         <div className="flex flex-col gap-5">
           <FormField
+            id="name"
             labelName="Tu nombre"
             type="text"
             name="name"
@@ -99,6 +99,7 @@ const CreatePost = () => {
           />
 
           <FormField
+            id="prompt"
             labelName="Prompt"
             type="text"
             name="prompt"

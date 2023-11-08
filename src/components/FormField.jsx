@@ -1,6 +1,7 @@
 import React from "react";
 
 const FormField = ({
+  id,
   labelName,
   type,
   name,
@@ -31,8 +32,8 @@ const FormField = ({
       </div>
       <input
         type="text"
-        id="name"
-        name="name"
+        id={id}
+        name={name}
         placeholder={placeholder}
         value={value}
         onChange={handleChange}
